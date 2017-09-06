@@ -1,0 +1,131 @@
+/*
+|--------------------------------------------------------------------------
+| Caminhos / Imagems e Fonts
+|--------------------------------------------------------------------------
+*/
+
+$path-image:  '../images';
+$path-font:   '../fonts';
+
+/*
+|--------------------------------------------------------------------------
+| Width Principal - Tamanho do Container
+|--------------------------------------------------------------------------
+*/
+
+$main-width:  1170px;
+
+/*
+|--------------------------------------------------------------------------
+| Cores
+|--------------------------------------------------------------------------
+*/
+
+$color-bg:			   #f1f1f1; 
+
+$color-text:		   #555555;
+$color-title:		   #555555;
+$color-subtitle:	 #555555;
+$color-link: 		   #66afe9;
+
+$color-theme:	     #ffffff;
+
+$btn-theme: 		   #ffffff;
+$btn-primary: 		 #337ab7;
+$btn-success:		   #5cb85c;
+$btn-danger:		   #d9534f;
+
+$input-bg:			   #ffffff;
+$input-border:		 #cccccc;
+$input-focus:		   #66afe9;
+$input-color:		   #555555;
+
+$selection-bg: 	 	 #ffffff;
+$selection-color:  #555555;
+
+$color-modal: 	   #0C0F13;
+
+/*
+|--------------------------------------------------------------------------
+| Fontes
+|--------------------------------------------------------------------------
+*/
+
+$font-main : 	  'OpenSansRegular';
+$font-regular:  'OpenSansRegular';
+$font-bold: 	  'OpenSansRegular';
+$font-light: 	  'OpenSansRegular';
+
+/*
+|--------------------------------------------------------------------------
+| Media Queries
+|--------------------------------------------------------------------------
+*/
+
+$media-desk: 		    "only screen and (max-width: 1170px)";
+$media-tablet-lg: 	"only screen and (max-width: 960px)";
+$media-tablet: 		  "only screen and (max-width: 770px)";
+$media-mobile-lg: 	"only screen and (max-width: 640px)";
+$media-mobile: 		  "only screen and (max-width: 480px)";
+
+// Ex:  @media #{$media-tablet}
+
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+.cd-background-wrapper {
+  background-color: #001426;
+  position: relative;
+  overflow: hidden;
+  -webkit-perspective: 4000px;
+  perspective: 4000px;
+}
+
+.cd-floating-background {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.cd-floating-background.is-absolute {
+  position: absolute;
+}
+.cd-floating-background img {
+  display: block;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* fixes a Firefox bug - images not correctly rendered*/
+  background-color: rgba(255, 255, 255, 0.01);
+}
+.cd-floating-background img:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cd-floating-background img:first-child {
+  -webkit-transform: translateZ(50px);
+  -ms-transform: translateZ(50px);
+  transform: translateZ(50px);
+}
+.cd-floating-background img:nth-child(2) {
+  -webkit-transform: translateZ(290px);
+  -ms-transform: translateZ(290px);
+  transform: translateZ(290px);
+}
+.cd-floating-background img:nth-child(3) {
+  -webkit-transform: translateZ(400px);
+  -ms-transform: translateZ(400px);
+  transform: translateZ(400px);
+}
+.no-preserve-3d .cd-floating-background {
+  /* we target browsers that don't support preserve-3d and show just a standard image - no effect visible */
+  position: relative;
+}
