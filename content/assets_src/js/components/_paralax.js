@@ -29,7 +29,7 @@ APP.component.Parallax = {
     checkLoad: function(){
     	var _this = this;
 
-		$('.cd-floating-background').find('img').eq(0).load(function() {
+		$('.cd-floating-background').find('> div').eq(0).load(function() {
 			_this.aspectRatio = $(this).width()/$(this).height();
 	  		if( $('html').hasClass('preserve-3d') ) _this.initBackground();
 		}).each(function() {

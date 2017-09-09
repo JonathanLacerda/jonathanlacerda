@@ -108,9 +108,9 @@ gulp.task('concat', function () {
  gulp.task('sass', function () {
     return gulp
     .src(paths.sass)
-    // .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    // .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
     .pipe(autoprefixer())
     .pipe(gulp.dest('content/assets/css'))
     .resume();

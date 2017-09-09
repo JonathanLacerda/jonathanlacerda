@@ -6,30 +6,25 @@
 
 APP.controller.General = {
 
-    init: function (){
-
+    init: function(){
         this.setup();
-        this.mostrarTexto();
-
+        this.start();
     },
 
-    setup : function (){
+    start: function(){
+        this.controllHeightHome();
+    },
+
+    setup : function(){
         APP.component.Parallax.init();
-
-        this.titulo = $('.app-title');
-
-
-        //$('body').hide();
-
+        this.home = $('.jcl__home');
+        this.heightScreen = $(window).innerHeight();
     },
 
-    mostrarTexto: function(){
-
-        var titulo = this.titulo.innerText;
-        var texto = "Você está na página: " + titulo + ".";
-
-        console.log(texto);
+    controllHeightHome: function() {
+        var _this = this;
+        
+        _this.home.css('height', _this.heightScreen);
 
     }
-
 };
