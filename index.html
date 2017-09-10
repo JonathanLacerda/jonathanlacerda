@@ -18,7 +18,7 @@
 	<meta property="og:type" content="Template" />
 	<meta property="og:image" content="content/assets/images/logo.png">
 	<!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet">
 	<link rel="stylesheet" href="content/assets/css/style.css">
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="content/assets/images/favicon.ico">
@@ -31,30 +31,35 @@
 <body>
 
     <!-- Header -->
-    <!--
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-md-1">
-                    <a href="javascript:;">
-                        <img src="content/assets/images/jcl__menu.png" alt="">
+                <div class="col-md-1 jcl__menu-link">
+                    <a href="javascript:;" id="jcl__menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </a>
                 </div>
-                <div class="col-md-offset-9 col-md-2">
-                    <a href="#contact-me">
+                <div class="col-md-offset-10 col-md-1">
+                    <a href="#contact-me" class="jcl__header-link jcl__hover">
                         CONTACT-ME
                     </a>
                 </div>
                 <menu>
-                    <a href="#projects">
-                        PROJECTS
-                    </a>
-                    <a href="#about">
-                        ABOUT
-                    </a>
-                    <a href="#contact">
-                        CONTACT
-                    </a>
+                    <div>
+                        <nav>
+                            <a href="#projects">
+                                PROJECTS
+                            </a>
+                            <a href="#about">
+                                ABOUT
+                            </a>
+                            <a href="#contact">
+                                CONTACT
+                            </a>
+                        </nav>
+                    </div>
                 </menu>
             </div>
         </div>
@@ -76,10 +81,19 @@
                         
                     </div>
                 </figure>
-            </div>
-            <div class="jcl__home">
-                <img src="content/assets/images/jcl__logo.png" alt="Jonathan Lacerda / Front-end">
-                <h1>Em construção</h1>
+                <div class="jcl__home">
+                    <img src="content/assets/images/jcl__logo.png" class="jcl__logo" alt="Jonathan Lacerda / Front-end">
+                    <div class="jcl__run-obj-container">
+                        <img src="content/assets/images/obj/jcl__obj-01.png" alt="Triangle" class="jcl__run-obj">
+                        <img src="content/assets/images/obj/jcl__obj-02.png" alt="Triangle" class="jcl__run-obj">
+                        <img src="content/assets/images/obj/jcl__obj-03.png" alt="Triangle" class="jcl__run-obj">
+                        <img src="content/assets/images/obj/jcl__obj-04.png" alt="Triangle" class="jcl__run-obj">
+                        <img src="content/assets/images/obj/jcl__obj-05.png" alt="Triangle" class="jcl__run-obj">
+                        <img src="content/assets/images/obj/jcl__obj-06.png" alt="Triangle" class="jcl__run-obj">
+                        <img src="content/assets/images/obj/jcl__obj-07.png" alt="Triangle" class="jcl__run-obj">
+                        <img src="content/assets/images/obj/jcl__obj-08.png" alt="Triangle" class="jcl__run-obj">
+                    </div>
+                </div>
             </div>
         </div>
     </section>

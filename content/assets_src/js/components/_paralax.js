@@ -12,17 +12,26 @@ APP.component.Parallax = {
     },
 
     start : function(){
+
+    	var _this = this ;
+
     	this.checkLoad();
     	this.detectMouseMove();
     	this.onResize();
     	this.getPerspective();
+
+    	window.requestAnimationFrame(function(){
+			_this.halfWindowH = $(window).height()*0.5,
+			_this.halfWindowW = $(window).width()*0.5;
+			_this.initBackground();
+		});
     },
 
     setup: function(){
 		this.halfWindowH = $(window).height()*0.5;
 		this.halfWindowW = $(window).width()*0.5;
-		this.maxRotationY = 5;
-		this.maxRotationX = 3;
+		this.maxRotationY = 7;
+		this.maxRotationX = 5;
 		this.aspectRatio;
     },
 

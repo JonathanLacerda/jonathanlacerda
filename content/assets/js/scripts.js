@@ -658,17 +658,26 @@ APP.component.Parallax = {
     },
 
     start : function(){
+
+    	var _this = this ;
+
     	this.checkLoad();
     	this.detectMouseMove();
     	this.onResize();
     	this.getPerspective();
+
+    	window.requestAnimationFrame(function(){
+			_this.halfWindowH = $(window).height()*0.5,
+			_this.halfWindowW = $(window).width()*0.5;
+			_this.initBackground();
+		});
     },
 
     setup: function(){
 		this.halfWindowH = $(window).height()*0.5;
 		this.halfWindowW = $(window).width()*0.5;
-		this.maxRotationY = 5;
-		this.maxRotationX = 3;
+		this.maxRotationY = 7;
+		this.maxRotationX = 5;
 		this.aspectRatio;
     },
 
@@ -793,6 +802,74 @@ APP.component.Parallax = {
 
 /*
 |--------------------------------------------------------------------------
+| Run
+|--------------------------------------------------------------------------
+*/
+
+APP.component.Run = {
+
+    init : function () {
+    	this.setup()
+    	this.start();
+    },
+
+    start : function(){
+    	this.run();
+    },
+
+    setup: function(){
+    	this.elm = $('.jcl__run-obj');
+    	this.box = $('.jcl__logo');
+		this.elmTop = this.box.offset().top;
+		this.elmLeft = this.box.offset().left,
+		this.elmTopFinal = this.elmTop + this.box.innerHeight(),
+		this.elmLeftFinal =  this.elmLeft + this.box.innerWidth();
+    },
+
+    run: function(){
+    	var _this = this;
+
+    	_this.elm.each(function(){
+			_this.generatePosition($(this));
+    	});
+
+		_this.elm.on('mouseenter',function(e){
+			_this.generatePosition($(this));
+			_this.generateRotate($(this));
+		});
+    },
+
+    generateRotate: function(elm){
+    	var _this = this;
+
+    	elm.css({
+    		'transform' : 'rotate('+_this.getRandomRotate(900)+'deg)'
+    	});
+    },
+
+    generatePosition: function(elm){
+    	var _this = this;
+
+  		var maxX = $(window).width() - elm.width();
+	    var maxY = $(window).height() - elm.height(); 
+
+	    elm.css({
+	        'left':_this.getRandomInt(0, maxX),
+	        'top':_this.getRandomInt(0, maxY)
+	    });
+    },
+
+    getRandomRotate: function(maxDeg){
+    	return Math.floor((Math.random() * maxDeg) + 0);
+    },
+
+   	getRandomInt: function(min, max) {
+    	return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+};
+
+/*
+|--------------------------------------------------------------------------
 | Utils
 |--------------------------------------------------------------------------
 */
@@ -829,17 +906,35 @@ APP.controller.General = {
 
     start: function(){
         this.controllHeightHome();
+        this.controllMenu();
+        APP.component.Parallax.init();
+        APP.component.Run.init();
     },
 
     setup : function(){
-        APP.component.Parallax.init();
+        this.body = $('body');
         this.home = $('.jcl__home');
         this.heightScreen = $(window).innerHeight();
+        this.open = $('#jcl__menu');
+        this.menu = $('menu');
+    },
+
+    controllMenu: function(){
+        var _this = this;
+
+        _this.menu.css('height', _this.heightScreen);
+
+        _this.open.click(function(){
+            _this.menu.fadeToggle();
+            _this.body.toggleClass('overlay');
+            $(this).toggleClass('active');
+        });
+
     },
 
     controllHeightHome: function() {
         var _this = this;
-        
+
         _this.home.css('height', _this.heightScreen);
 
     }
@@ -855,7 +950,6 @@ APP.controller.Index = {
 
     init: function (){
 
-        console.log('Chamando Controller Index', 'background: red');
 
     },
 

@@ -28,6 +28,10 @@ body{
 	background-color: $color-bg;
 	font-family: $font-main;
 	color: $color-text;
+
+    &.overlay{
+        overflow: hidden;
+    }
 }
 
 .container{
@@ -149,3 +153,35 @@ input[type="submit"] {
 
 img::selection      { background: transparent; }
 img::-moz-selection { background: transparent; }
+
+
+.jcl__hover{
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0;
+      display: block;
+      height: 20px;
+      width: 10px;
+      -webkit-transition: left .3s;
+      -moz-transition: left .3s;
+      -ms-transition: left .3s;
+      -o-transition: left .3s;
+      transition: left .3s;
+    }
+
+    &:hover{
+      text-decoration: none;
+
+        &:before{
+            background-color: #fff;
+            left: 100%;           
+        }
+    }
+}
+

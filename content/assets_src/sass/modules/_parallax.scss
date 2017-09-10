@@ -1,3 +1,9 @@
+/*
+|--------------------------------------------------------------------------
+| Parallax
+|--------------------------------------------------------------------------
+*/
+
 .cd-background-wrapper {
   position: relative;
   overflow: hidden;
@@ -16,7 +22,8 @@
   transform: translateZ(0);
 }
 .cd-floating-background.is-absolute {
-  position: absolute;
+    position: absolute;
+    width: 100%;
 }
 .cd-floating-background div {
   display: block;

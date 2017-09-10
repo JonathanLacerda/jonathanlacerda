@@ -6,6 +6,7 @@
 
 .jcl__home{
 	text-align: center;
+	position: relative;
 
 	h1{
 	    font-weight: 100;
@@ -15,10 +16,11 @@
 	    font-size: 1.5em;
 	}
 
-	img{
+	.jcl__logo{
 		position: relative;
-		margin-top: 10%;
+		margin-top: 15%;
 		display: inline-block;
+		z-index: 3;
 	}
 
 	.content,
@@ -30,6 +32,7 @@
 	.cd-background-wrapper{
 		position: absolute;
 		width: 100%;
+		z-index: 3;
 	}
 }
 
