@@ -1,0 +1,81 @@
+.logo{
+    position: absolute;
+    width: 85px;
+    height: 160px;
+    border: 2px solid #000;
+    left: 50%;
+    transform: translate(-50%);
+    top: -25px;
+    background: $color06;
+    border-top: 0;    
+    box-shadow: -5px 4px 0px 0px #ccc;
+    
+    &:before{
+      content: '';
+      width: 100%;
+      height: 54px;
+      border: 0px solid #000;
+      border-right: 0;
+      border-left: 0;
+      position: absolute;
+      top: 13px;
+    }
+    
+    span{
+      position: absolute;
+      display: none;
+      font-size: 44px;
+      color: $color05;
+      
+      &:nth-child(1){
+        display: block;  
+        left: 7px;
+        top: 0;
+      }
+      &:nth-child(2){
+        display: block;  
+        left: 50%;
+        transform: translate(-50%);
+      }
+      &:nth-child(3){
+        display: block;  
+        left: 53px;
+      }
+      &:nth-child(4){
+        display: block;  
+        left: 7px;
+        top: 43px;
+      }
+      &:nth-child(5){
+        display: block;  
+        left: 50%;
+        transform: translate(-50%);
+        top: 43px;
+      }
+      &:nth-child(6){
+        display: block;  
+        left: 53px;
+        top: 43px;
+      }
+      &:nth-child(7){
+        display: block;  
+        left: 7px;
+        top: 86px;
+      }
+      &:nth-child(8){
+        display: block;  
+        left: 50%;
+        transform: translate(-50%);
+        top: 86px;
+      }
+      &:nth-child(9){
+        display: block;
+        left: 43px;
+        top: 114px;
+        font-size: 10.4px;
+        white-space: nowrap;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+    }
+  }

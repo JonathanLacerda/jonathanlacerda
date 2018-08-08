@@ -14,7 +14,10 @@
 
 @import "modules/helpers";
 @import "modules/buttons";
-@import "modules/parallax";
+@import "modules/logo";
+@import "modules/menu";
+@import "modules/cart";
+//@import "modules/parallax";
 
 // SOURCE
 
@@ -30,4 +33,5 @@
 @import "layout/core/footer";
 
 // // LAYOUT - SECTIONS
+@import "layout/sections/header";
 @import "layout/sections/home";

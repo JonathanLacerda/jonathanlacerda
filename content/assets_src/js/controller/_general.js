@@ -12,19 +12,25 @@ APP.controller.General = {
     },
 
     start: function(){
-        this.controllHeightHome();
+       // this.tamMenu();
+        this.controllerMenu();
+    },
+
+    tamMenu(){
+        let wTela = $(window).innerWidth();
+
+        $('.menuToggle .menu').css('width', wTela / 2);
+    },
+
+    controllerMenu(){
+        $('.menuToggle').click(function(){
+            $(this).toggleClass('active');
+        });
     },
 
     setup : function(){
         APP.component.Parallax.init();
         this.home = $('.jcl__home');
         this.heightScreen = $(window).innerHeight();
-    },
-
-    controllHeightHome: function() {
-        var _this = this;
-        
-        _this.home.css('height', _this.heightScreen);
-
     }
 };
