@@ -148,3 +148,7 @@ input[type="submit"] {
 
 img::selection      { background: transparent; }
 img::-moz-selection { background: transparent; }
+
+.jl__border{
+  border: 2px solid $color05
+}

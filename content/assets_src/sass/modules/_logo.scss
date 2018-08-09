@@ -70,12 +70,20 @@
       }
       &:nth-child(9){
         display: block;
-        left: 43px;
-        top: 114px;
-        font-size: 10.4px;
+        left: 50px;
+        top: 104.5px;
+        font-size: 11.4px;
         white-space: nowrap;
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
+
+        small{
+          -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+          position: absolute;
+          left: 27px;
+          top: 3.2px;
+        }
       }
     }
   }
