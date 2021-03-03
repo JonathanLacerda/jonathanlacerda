@@ -1,0 +1,113 @@
+$base: #282929;
+
+.header{
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+
+  &__logo{
+    position: relative;
+  }
+
+  &__icon{
+    position: absolute;
+    left: -37px;
+    top: 40px;
+    font-size: 96px;
+    color: $base;
+  }
+
+  &__text{
+    span{
+      position: absolute;
+      height: 90px;
+      position: absolute;
+      width: 20px;
+      left: 0;
+      top: 0;
+      transform-origin: bottom center;
+
+      &:nth-child(1){
+        transform: rotate(13.3deg);
+      }
+      &:nth-child(2){
+        transform: rotate(26.6deg);
+      }
+      &:nth-child(3){
+        transform: rotate(39.9deg);
+      }
+      &:nth-child(4){
+        transform: rotate(53.2deg);
+      }
+      &:nth-child(5){
+        transform: rotate(66.5deg);
+      }
+      &:nth-child(6){
+        transform: rotate(79.9deg);
+      }
+      &:nth-child(7){
+        transform: rotate(93.1deg);
+      }
+      &:nth-child(8){
+        transform: rotate(106.4deg);
+      }
+      &:nth-child(9){
+        transform: rotate(119.7deg);
+      }
+      &:nth-child(10){
+        transform: rotate(133deg);
+      }
+      &:nth-child(11){
+        transform: rotate(146.3deg);
+      }
+      &:nth-child(12){
+        transform: rotate(159.6deg);
+      }
+      &:nth-child(13){
+        transform: rotate(172.9deg);
+      }
+      &:nth-child(14){
+        transform: rotate(186.2deg);
+      }
+      &:nth-child(15){
+        transform: rotate(199.5deg);
+      }
+      &:nth-child(16){
+        transform: rotate(212.8deg);
+      }
+      &:nth-child(17){
+        transform: rotate(226.1deg);
+      }
+      &:nth-child(18){
+        transform: rotate(239.4deg);
+      }
+      &:nth-child(19){
+        transform: rotate(252.4deg);
+      }
+      &:nth-child(20){
+        transform: rotate(265.7deg);
+      }
+      &:nth-child(21){
+        transform: rotate(279deg);
+      }
+      &:nth-child(22){
+        transform: rotate(292.3deg);
+      }
+      &:nth-child(23){
+        transform: rotate(305.6deg);
+      }
+      &:nth-child(24){
+        transform: rotate(318.9deg);
+      }
+      &:nth-child(25){
+        transform: rotate(332.2deg);
+      }
+      &:nth-child(26){
+        transform: rotate(345.5deg);
+      }
+      &:nth-child(27){
+        transform: rotate(358.8deg);
+      }
+    }
+  }
+}
